@@ -1,0 +1,14 @@
+// ---------------------------------  
+// Rafael Corsi @ insper . edu . br
+//              2020a
+// ---------------------------------
+
+function Main.main 0
+
+push temp 0
+call fact 1
+pop temp 1
+
+// nao deve tirar isso!
+label while2
+    goto while2

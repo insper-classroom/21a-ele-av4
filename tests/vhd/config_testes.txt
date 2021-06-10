@@ -1,0 +1,12 @@
+######################################
+# Rafael.Corsi @ Insper.edu.br       #
+#  Elementos de Sistemas             # 
+#                                    # 
+#  - Para incluir o teste basta      #
+#  descomentar a linha               #
+#                                    #
+######################################
+
+tabelaVerdade.vhd
+mapaKarnaught.vhd
+elevador.vhd

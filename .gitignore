@@ -1,0 +1,13 @@
+bin/
+tests/testsVM/tests/abs/abs0_end.mif
+tests/testsVM/tests/factorial/factorial0_end.mif
+tests/testsVM/tests/factorial/factorial1_end.mif
+tests/testsVM/tests/factorial/factorial2_end.mif
+tests/testsVM/tests/pseudo/pseudo0_end.mif
+tests/testsVM/tests/pseudo/pseudo1_end.mif
+tests/testsVMTranslator/tests/addi/addi0_end.mif
+tests/testsVMTranslator/tests/delete/delete0_end.mif
+vmTranslator/Z01-VMTranslator.jar
+vmTranslator/__pycache__/
+vmTranslator/target/
+vunit_out/
