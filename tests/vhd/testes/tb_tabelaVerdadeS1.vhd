@@ -4,11 +4,11 @@ use ieee.std_logic_1164.all;
 library vunit_lib;
 context vunit_lib.vunit_context;
 
-entity tb_tabelaVerdadeS0 is
+entity tb_tabelaVerdadeS1 is
   generic (runner_cfg : string);
 end entity;
 
-architecture tb of tb_tabelaVerdadeS0 is
+architecture tb of tb_tabelaVerdadeS1 is
 
   component tabelaVerdade is  port (
     A,B,C,D    : in  std_logic;
@@ -25,30 +25,6 @@ begin
   main : process
   begin
     test_runner_setup(runner, runner_cfg);
-
-    w <= "0000"; wait for 200 ps;
-    assert(s0 = '0') report "Falha em teste s0" severity error;
-
-    w <= "0010"; wait for 200 ps;
-    assert(s0 = '0') report "Falha em teste s0" severity error;
-
-    w <= "0110"; wait for 200 ps;
-    assert(s0 = '1') report "Falha em teste s0" severity error;
-
-    w <= "0100"; wait for 200 ps;
-    assert(s0 = '0') report "Falha em teste s0" severity error;
-
-    w <= "1010"; wait for 200 ps;
-    assert(s0 = '0') report "Falha em teste s0" severity error;
-
-    w <= "1000"; wait for 200 ps;
-    assert(s0 = '1') report "Falha em teste s0" severity error;
-
-    w <= "1100"; wait for 200 ps;
-    assert(s0 = '0') report "Falha em teste s0" severity error;
-
-    w <= "1110"; wait for 200 ps;
-    assert(s0 = '1') report "Falha em teste s0" severity error;
 
     w <= "1000"; wait for 200 ps;
     assert(s1 = '1') report "Falha em teste s1" severity error;

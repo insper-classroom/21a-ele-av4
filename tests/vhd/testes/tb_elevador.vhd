@@ -27,6 +27,23 @@ begin
   begin
     test_runner_setup(runner, runner_cfg);
 
+    f <= "1000"; wait for 200 ps;
+    assert(abrir = '0' and trava = '1') report "Falha em teste s0" severity error;
+
+    f <= "1010"; wait for 200 ps;
+    assert(abrir = '0' and trava = '1') report "Falha em teste s0" severity error;
+
+    f <= "0001"; wait for 200 ps;
+    assert(abrir = '1' and trava = '0') report "Falha em teste s0" severity error;
+
+    f <= "0010"; wait for 200 ps;
+    assert(abrir = '1' and trava = '0') report "Falha em teste s0" severity error;
+
+    f <= "0100"; wait for 200 ps;
+    assert(abrir = '1' and trava = '0') report "Falha em teste s0" severity error;
+
+    f <= "1001"; wait for 200 ps;
+    assert(abrir = '0' and trava = '1') report "Falha em teste s0" severity error;
 
     test_runner_cleanup(runner); -- Simulacao acaba aqui
   end process;

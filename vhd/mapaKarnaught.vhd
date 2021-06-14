@@ -11,5 +11,13 @@ architecture  rtl OF mapaKarnaught IS
 
 begin
 
+  S0 <= ((not A) and (not B) and (not D)) or (C and (not D)) or ((not A) and B and (not C));
+
+  S1 <= ((not A) and (not B) and (not C) and (not D)) or
+        (A and (not B) and C and (not D));
+
+  S2 <= ((not C) and A);
+
+  S3 <= ((not B) and (not C) and (not D)) or (A and (not B) and (not C));
 
 end architecture;

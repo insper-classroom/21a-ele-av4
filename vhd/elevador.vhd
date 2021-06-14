@@ -9,7 +9,14 @@ end entity;
 
 architecture  rtl OF elevador IS
 
+  signal o : std_logic;
+
 begin
 
+  o <= (not M) and (F1 xor F2 xor F3);
+
+  ABRIR <= o;
+
+  TRAVA <= not o;
 
 end architecture;

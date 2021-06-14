@@ -25,12 +25,22 @@
 function Main.main 0
 
 
+push temp 0
+push constant 4
+eq
+if-goto IF
 
+push temp 2
+push constant 4
+add
+pop temp 1
+goto END
 
+label IF
+push constant 12
+pop temp 1
 
-
-
-
+label END
 
 // nao deve tirar isso!
 label while2

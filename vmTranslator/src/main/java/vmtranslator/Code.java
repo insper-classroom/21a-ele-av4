@@ -44,11 +44,20 @@ public class Code {
         List<String> commands = new ArrayList<String>();
 
         if (command.equals("delete")) {
- //           commands.add("   ");
+            commands.add("leaw $SP, %A");
+            commands.add("movw (%A), %D");
+            commands.add("decw %D");
+            commands.add("movw %D, (%A)");
         }
 
         if ( command.equals("addi")) {
- //           commands.add("   ");
+            commands.add("leaw $"+String.valueOf(index)+",%A" );
+            commands.add("movw %A, %D");
+            commands.add("leaw $SP, %A");
+            commands.add("movw (%A), %A");
+            commands.add("decw %A");
+            commands.add("addw (%A), %D, %D");
+            commands.add("movw %D, (%A)");
         }
 
         String[] stringArray = new String[ commands.size() ];

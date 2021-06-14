@@ -1,1 +1,50 @@
-function fact 0
+function fact 3
+    push argument 0
+    push constant 0
+    eq
+    if-goto um
+
+    push argument 0
+    push constant 1
+    eq
+    if-goto um
+
+    push argument 0
+    push constant 1
+    sub
+    pop local 0
+
+    push argument 0
+    pop local 1
+
+    goto loop
+
+label um
+    push constant 1
+    pop local 1
+    goto end
+
+label loop
+
+    push local 0
+    push constant 1
+    eq
+    if-goto end
+
+    push local 0
+    push local 1
+    call mult 2
+    pop local 1
+
+    push local 0
+    push constant 1
+    sub
+    pop local 0
+
+    goto loop
+
+label end
+
+push local 1
+
+return

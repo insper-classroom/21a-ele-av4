@@ -8,5 +8,9 @@
 ######################################
 
 tabelaVerdade.vhd
-mapaKarnaught.vhd
+tabelaVerdadeS1.vhd
+mapaKarnaughtS0.vhd
+mapaKarnaughtS1.vhd
+mapaKarnaughtS2.vhd
+mapaKarnaughtS3.vhd
 elevador.vhd

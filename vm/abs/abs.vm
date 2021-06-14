@@ -1,1 +1,19 @@
-function abs 0
+function abs 1
+
+    push argument 0
+    push constant 0
+    gt
+    if-goto maior
+
+    push argument 0
+    neg
+    pop local 0
+    goto end
+
+label maior
+    push argument 0
+    pop local 0
+
+label end
+    push local 0
+    return
